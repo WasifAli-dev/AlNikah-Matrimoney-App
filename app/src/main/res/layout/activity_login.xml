@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#ffffff"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/logoImage"
+        android:scaleType="fitXY"
+        android:transitionName="logo_image"
+        android:src="@drawable/lojmin"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoTextWelcome"
+        android:transitionName="logo_text"
+        android:fontFamily="@font/bungee"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:text="Welocome to Best Match Finder App"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/sloganText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:text="Sign In to continue"
+        android:textSize="18sp"
+        android:layout_gravity="left"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:passwordToggleEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:id="@+id/forgetBtn"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="Forget Password"
+            android:layout_margin="5dp"
+            android:layout_gravity="right"
+            android:elevation="0dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signinBtn"
+            android:text="Sign In"
+            android:background="#000"
+            android:textColor="#fff"
+            android:layout_margin  = "5dp"
+            />
+
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="Creatre New Account"
+        android:onClick="openRegistrationScreen"
+        android:layout_margin="5dp"
+        android:id="@+id/registerBtn"
+        android:elevation="0dp"
+        android:textColor="#000"
+        />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
